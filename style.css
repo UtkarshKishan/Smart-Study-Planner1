@@ -167,6 +167,9 @@ section > .schedulePage {
     margin-left: -5px;
     color: #fff;
 }
+.left-part .box .text p{
+  font-size: 18px;
+}
 .right-part{
     width: 40%;
     margin: 10px;
@@ -580,3 +583,4 @@ section > .schedulePage {
     margin-top: 10px;
   }
 }
+
