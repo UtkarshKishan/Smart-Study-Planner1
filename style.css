@@ -1,0 +1,593 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+    /* color:#fff;  */
+    background: #0f1e2e;
+    color: #fff;
+}
+.main{
+    min-height: 100vh;
+    background: url('b.jpg') no-repeat fixed ;
+    background-size: cover;
+    background-position: center;
+    transition: filter 0.3s ease;
+}
+/* Header */
+.header{
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+#logo{
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: none;
+    color:rgba(0, 255, 166, 0.748);
+    text-shadow: 2px 5px 10px;
+    filter: drop-shadow(0 0 0.75rem crimson);
+    background: linear-gradient(to right, violet,blue,aqua,orange,red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+}
+#logo:hover{
+    transform: scale(1.05);
+}
+a{
+    font-size: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-decoration: none;
+    color:lime;
+}
+ /* All sections */
+section {
+  display: none;
+  height: 100vh;
+  padding: 0 20px;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* Active section */
+section.active {
+  display: flex;           
+}
+section > .container,
+section > .contact,
+section > .login-info,
+section > .study,
+section > .schedulePage {
+  max-width: 600px;
+  width: 90%;
+  margin: 0 auto;
+}
+/* Welcome */
+.container{
+    width: 60%;
+    border-radius: 5px;
+    background: rgba(25, 60, 175, 0.534);
+    margin: auto;
+    margin-top: 10%;
+    height: 60%;
+    padding: 30px;
+    box-shadow: 0 0 10px #00e5ff;
+    z-index: 1;
+    box-sizing: border-box;  
+    overflow: auto;
+}
+.container .start-btn{
+    margin-top: 20px;
+    letter-spacing: 1px;
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid #00ff08;    
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.container .start-btn:hover{
+    background: linear-gradient(45deg,#00e5ff,#0f7d7a);
+    border: 2px solid white;
+    transform: scale(1.05);
+}
+.container #para1{
+    font-size: large;
+    padding-top: 10px;
+}
+/*Contact Page*/
+.contact{
+    min-height: 30vh;
+    padding: 15px 50px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contact h1{
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+}
+.content{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.left-part{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    justify-content: center;
+    margin-top: 25px;
+}
+.left-part .box{
+    position: relative;
+    padding: 10px 0;
+    display: flex;
+}
+.left-part .box .icon{
+    min-width: 30px;
+    height: 30px;
+    /* background: #fff; */
+    color: #ff004c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 50%; */
+    font-size: 25px;
+}
+.left-part .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 15px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+    text-align: left;
+}
+.left-part .box .text h3{
+    font-weight: 500;
+    color: aqua;
+}
+.left-part .box .text a{
+    margin-left: -5px;
+    color: #fff;
+}
+.right-part{
+    width: 40%;
+    margin: 10px;
+    padding: 30px;
+    background: rgba(25, 60, 175, 0.534);
+    float: right;
+    border-radius: 10px;
+}
+.right-part h2{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+.right-part .input-box2{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.right-part .input-box2 input,
+.right-part .input-box2 textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 15px;
+    margin: 8px 0;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #333;
+    resize: none;
+}
+.right-part .input-box2 span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.right-part .input-box2 input:focus ~span,
+.right-part .input-box2 input:valid ~span,
+.right-part .input-box2 textarea:focus ~span,
+.right-part .input-box2 textarea:valid ~span{
+    color: #00ff08;
+    font-size: 12px;
+    transform: translateY(-21px);
+}
+.right-part .input-box2 input[type="submit"]
+{
+    width: 100px;
+    background: black;
+    border-radius: 5px;
+    color: #fff;
+    border: 2px solid #00ff08;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.right-part .input-box2 input[type="submit"]:hover{
+    background: linear-gradient(45deg, #00e5ff, #0f7d7a);
+    transform: scale(1.05);
+    border: 2px solid white;
+}
+/* Login */
+.login-info {
+  background: rgba(25, 60, 175, 0.9);
+  width: 35%;
+  height: 60%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 5%;
+}
+.input-box input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 2px solid white;
+  text-align: center;
+  /* color: #af1e1e; */
+  /* background: #00e5ff; */
+}
+/* .input-box input::placeholder{
+    color: #625b5b;
+} */
+.login-btn {
+  display: block;
+  width: 40%;
+  margin: 20px auto;
+  padding: 10px;
+  background: #000;
+  color: #fff;
+  border: 2px solid #00ff08;
+  border-radius: 5px;
+  cursor: pointer;
+  /* text-align: center; */
+  transition: transform 0.3s ease, background 0.3s ease;
+  filter: drop-shadow(0 0 0.25rem aqua);
+}
+.login-info h2{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+.input-box{
+    margin: 20px 0;
+    text-align: left;
+}
+.login-btn:hover{
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #00e5ff, #0f7d7a);
+    border: 2px solid white;
+}
+/* Study Planner */
+.study {
+    width: 70%;
+    height: 70%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    background: #1280bb7d;
+    box-shadow: 0 0 10px #0077ff;
+    overflow: auto;
+}
+.study h1{
+    text-align: center;
+    background: linear-gradient(to right,aqua,#05cec7,#00ff91);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 0.75rem aqua);
+    margin-bottom: 20px;
+    font-style: italic;
+}
+.input-box1{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 15px 0;
+  gap: 35px; 
+}
+.input-box1 label{
+  width: 150px; 
+  margin-right: 40px;
+  font-weight: bold;
+  color: #fff;
+  text-align: left;
+}
+.input-box1 input{
+  flex: 1;
+  width: 100%;
+  padding: 8px 50px;
+  background:white;
+  border-radius: 5px;
+  border: 2px solid lime;
+  transition: transform 0.3s ease;
+  color: black;
+  margin-left: 50px;
+}
+.input-box1 input:hover{
+  transform: scale(1.05);
+}
+.input-box1 input::placeholder{
+  color: black;
+}
+.add-btn,
+.schedule-btn {
+  display: block;
+  width: 40%;
+  margin: 30px auto;
+  padding: 10px 20px;
+  background: #000;
+  color: #fff;
+  border: 2px solid #00ff08;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+  filter: drop-shadow(0 0 0.25rem aqua);
+}
+.add-btn:hover,
+.schedule-btn:hover {
+  background: linear-gradient(45deg, #00e5ff, #0f7d7a);
+  transform: scale(1.05);
+  border: 2px solid white;
+}
+.input-box1 input:hover{
+    transform: scale(1.05);
+}
+.remove-subject-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 5px 10px;
+    background: #ff0000;
+    color: #fff;
+    border: 2px solid rgb(255, 0, 144);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.remove-subject-btn:hover,
+.back-btn:hover,
+.back-btn-home:hover {
+    transform: scale(1.05);
+    background: darkred;
+}
+    /* Schedule Page */
+.schedulePage {
+  width: 80%;
+  height: 70%;
+  margin: auto;
+  padding: 20px;
+}
+.schedulePage p{
+    text-align: left;
+    margin: 10px;
+    padding-left: -20px;
+}
+.schedulePage h1{
+    margin-bottom: 20px;
+}
+.schedule-tiles {
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  display: grid;  
+}
+.tile {
+  background: #0015ffd0;
+  padding: 25px;
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0 0 10px #1900ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+  margin: 10px;
+}
+.tile:hover{
+    transform: scale(1.05);
+    background:black;
+}
+.tile>*{
+    padding: 0 10px;
+}
+.tile.completed {
+  background: #2e304f;
+  color: #cfc;
+}
+.tile button {
+  background: aqua;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Progress Bar */
+.progress-container {
+  width: 100%;
+  background: #333;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  height: 25px;
+  position: relative;
+}
+.progress-bar {
+  height: 100%;
+  background:lime;
+  width: 0%;
+  border-radius: 20px;
+  transition: width 0.4s ease;
+}
+#progressText {
+  position: absolute;
+  top: -30px;
+  right: 10px;
+  font-size: 14px;
+}
+
+/* Back button */
+.back-btn,
+.back-btn-home {
+  margin-top: 20px;
+  padding: 5px 10px;
+  background: crimson;
+  border: 2px solid rgb(255, 0, 144);
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .header {
+    padding: 15px 5%;
+  }
+  .container {
+    width: 70%;
+    height: auto;
+    padding: 30px;
+  }
+  .study {
+    width: 70%;
+    height: auto;
+  }
+  .schedulePage {
+    width: 70%;
+    height: auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .left-part, .right-part {
+    width: 100%;
+    float: none;
+    margin: 0;
+  }
+  .contact {
+    flex-direction: column;
+    text-align: center;
+  }
+  .input-box1 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .input-box1 label {
+    margin: 0;
+  }
+  .input-box1 input {
+    margin-left: 0;
+    width: 100%;
+  }
+  .study {
+    width: 75%;
+  }
+  .add-btn, .schedule-btn {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  #logo {
+    font-size: 24px;
+  }
+  a {
+    font-size: 16px;
+  }
+  .container {
+    width: 70%;
+    padding: 30px;
+  }
+  .login-info {
+    width: 50%;
+    height: auto;
+  }
+  .study {
+    width: 75%;
+    padding: 20px;
+  }
+  .study h1 {
+    font-size: 24px;
+  }
+  .add-btn, .schedule-btn {
+    width: 80%;
+  }
+  .tile {
+    /* flex-direction: column; */
+    align-items: flex-start;
+    
+  }
+  .tile button {
+    margin-top: 10px;
+    width: 40%;
+  }
+  .schedulePage h1 {
+    font-size: 20px;
+  }
+  #progressText {
+    font-size: 12px;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  #logo {
+    font-size: 20px;
+    padding: 10px;
+  }
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container {
+    padding: 25px;
+  }
+  .study h1 {
+    font-size: 20px;
+  }
+  .schedulePage p {
+    font-size: 14px;
+  }
+  .schedulePage h1 {
+    font-size: 20px;
+  }
+  .add-btn, .schedule-btn {
+    width: 80%;
+  }
+  .progress-container {
+    height: 20px;
+  }
+  #progressText {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+}

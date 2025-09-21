@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Smart Study Planner</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <main class="main">
+            <header class="header">
+                <a href="#" id="logo">Smart Study Planner</a> 
+                <nav class="navbar">
+                    <a href="#" id="homeLink">Home</a>
+                    <a href="#" id="contactLink">Contact</a>
+                </nav>
+            </header>
+            <section class="container active" id="mainPage">
+                    <p id="para1">Welcome to the smart study planner where you can organize study schedules and 
+                    track academic tasks. This planner helps you create, view, and manage study goals with reminders and visual timelines.</p>
+                    <button class="start-btn">Get Started</button>
+            </section>
+            <section class="contact" id="contactPage">
+                    <h1>Contact Us</h1>
+                    <div class="content">
+                        <div class="left-part">
+                            <div class="box">
+                                <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="text">
+                                    <h3>Address</h3>
+                                    <p>Vivekananda Bhawan PG Hall-2<br>University of Kalyani</p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="icon"><i class="fas fa-phone"></i></div>
+                                <div class="text">
+                                    <h3>Phone</h3>
+                                    <p>+91 7970959892</p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="icon"><i class="fas fa-envelope"></i></div>
+                                <div class="text">
+                                    <h3>Email</h3>
+                                    <p>1136utkarshkishan@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="icon"><i class="fab fa-linkedin"></i></div>
+                                <div class="text">
+                                    <h3>Linkedin</h3>
+                                    <a href="https://www.linkedin.com/in/utkarsh-kishan-59a967256/" target="_blank">Utkarsh Kishan</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-part">
+                            <form>
+                                <h2>Send Message</h2>
+                                <div class="input-box2">
+                                    <input type="text" name="fullname" required>
+                                    <span>Full Name</span>
+                                </div>
+                                <div class="input-box2">
+                                    <input type="text" name="email" required>
+                                    <span>Email</span>
+                                </div>
+                                <div class="input-box2">
+                                    <textarea name="message" required></textarea>
+                                    <span>Type your Message...</span>
+                                </div>
+                                <div class="input-box2">
+                                    <input type="submit" name="" value="Send" id="send-btn">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <button onclick="goHome()" class="back-btn-home">Back</button>
+            </section>
+        
+
+            <section class="login-info" id="loginPage">
+                <form id="loginForm">
+                    <h2>Login</h2>
+                    
+                    <div class="input-box">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Enter your username" autocomplete="username" required>
+                    </div>
+                    
+                    <div class="input-box">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="current-password" required>
+                    </div>  
+                    <button class="login-btn">Login</button>
+                </form>
+            </section>
+
+            <section class="study" id="studyPage">
+                <h1>Create your study plan</h1>
+                <form id="study-form">    
+                    <div class="input-box1">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div id="subjects-container">
+                        <div class="subject-group">
+                            <div class="input-box1">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="eg., Science" required>
+                            </div>
+                            <div class="input-box1">
+                                <label for="sdate">Start Date</label>
+                                <input type="date" id="sdate" name="sdate" placeholder="Select start date" required>
+                            </div>  
+                            <div class="input-box1">
+                                <label for="edate">End Date</label>
+                                <input type="date" id="edate" name="edate" placeholder="Select end date" required>
+                            </div>
+                            <div class="input-box1">
+                                <label for="stime">Start Time</label>
+                                <input type="time" id="stime" name="stime" required>
+                            </div>    
+                            <div class="input-box1">
+                                <label for="etime">End Time</label>
+                                <input type="time" id="etime" name="etime" required>
+                            </div> 
+                            <hr>
+                        </div>  
+                    </div>  
+                    <button class="add-btn" type="button">Add Another Subject</button>
+                    <div class="input-box1">
+                        <label for="goal">Goal</label>
+                        <input type="text" id="goal" name="goal" required>
+                    </div>
+                    <button class="schedule-btn" type="submit">Generate Schedule</button>
+                </form>
+            </section>
+
+            <section class="schedulePage" id="schedulePage">
+                <h1>Your Study Plan</h1>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                    <span id="progressText">0% Completed</span>
+                </div>
+
+                <div id="scheduleOutput"></div>
+                <button onclick="goBack()" class="back-btn">Back</button>
+            </section>
+        </main>
+        <script src="./script.js"></script>
+    </body>
+</html>
