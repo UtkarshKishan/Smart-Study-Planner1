@@ -14,6 +14,9 @@ body{
     background-size: cover;
     background-position: center;
     transition: filter 0.3s ease;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 /* Header */
 .header{
@@ -49,6 +52,18 @@ a{
     padding-right: 5px;
     text-decoration: none;
     color:lime;
+}
+/*Footer*/
+.footer{
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 100;
+  display: flex;
+  background: transparent;
+  padding: 20px 10%;
+  margin-top: auto;
 }
  /* All sections */
 section {
@@ -583,5 +598,6 @@ section > .schedulePage {
     margin-top: 10px;
   }
 }
+
 
 
