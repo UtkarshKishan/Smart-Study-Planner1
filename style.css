@@ -603,10 +603,12 @@ section > .schedulePage {
     font-size: 12px;
     margin-top: 10px;
   }
-  #my-mail, #my-phone{
+  #my-mail,
+  #my-phone {
     font-size: 15px;  
   }
 }
+
 
 
 
