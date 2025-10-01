@@ -578,6 +578,12 @@ section > .schedulePage {
   .container {
     padding: 25px;
   }
+  .login-btn{
+    width: 50%;
+  }
+  .input-box input{
+    font-size: 10px;
+  }  
   .study h1 {
     font-size: 20px;
   }
@@ -597,10 +603,11 @@ section > .schedulePage {
     font-size: 12px;
     margin-top: 10px;
   }
-  #my-mail{
+  #my-mail, #my-phone{
     font-size: 15px;  
   }
 }
+
 
 
 
